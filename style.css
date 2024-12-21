@@ -1,0 +1,81 @@
+body {
+    margin: 0;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #0a0a2a;
+    overflow: hidden;
+}
+
+.background {
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    background: linear-gradient(45deg, #0a0a2a, #1a237e, #311b92);
+    background-size: 400% 400%;
+    animation: gradientBG 15s ease infinite;
+    z-index: -2;
+}
+
+.moon {
+    position: fixed;
+    width: 100px;
+    height: 100px;
+    background: #ffd700;
+    border-radius: 50%;
+    top: 50px;
+    right: 100px;
+    box-shadow: 0 0 50px #fff5b3;
+    animation: moonGlow 4s ease-in-out infinite;
+    z-index: -1;
+}
+
+.star {
+    position: fixed;
+    width: 2px;
+    height: 2px;
+    background: white;
+    border-radius: 50%;
+    animation: twinkle 1s ease-in-out infinite;
+    z-index: -1;
+}
+
+.shooting-star {
+    position: fixed;
+    width: 150px;
+    height: 2px;
+    background: linear-gradient(120deg, white, transparent);
+    animation: shootingStar 3s linear infinite;
+    opacity: 0;
+    z-index: -1;
+}
+
+#board {
+    background-color: transparent;
+    border-top: 5px solid rgb(120, 235, 168);
+    border-left: 5px solid rgb(120, 235, 168);
+    border-right: 5px solid lightgreen;
+}
+
+@keyframes gradientBG {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+@keyframes twinkle {
+    0%, 100% { transform: scale(1); opacity: 1; }
+    50% { transform: scale(1.5); opacity: 0.5; }
+}
+
+@keyframes moonGlow {
+    0%, 100% { box-shadow: 0 0 50px #fff5b3; }
+    50% { box-shadow: 0 0 70px #fff5b3; }
+}
+
+@keyframes shootingStar {
+    0% { transform: translateX(-100px); opacity: 1; }
+    20% { opacity: 1; }
+    100% { transform: translateX(calc(100vw + 100px)); opacity: 0; }
+}
