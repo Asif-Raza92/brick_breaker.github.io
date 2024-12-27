@@ -2,6 +2,8 @@
  
 Brick Breaker is a classic arcade-style game that combines exciting gameplay with a visually captivating space-themed design. Featuring a responsive background with a moon and colorful, glowing bricks, this game is perfect for players of all ages.
 
+Disclaimer : This project is made with the help of Tutorial and I add some features and changed its User interface also take help of Ai to solve only error in projects.
+
 Features
 
 Responsive Space Animation: A beautifully animated space background with a moon that adjusts seamlessly to different screen sizes.
